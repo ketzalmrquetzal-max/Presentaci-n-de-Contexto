@@ -2,37 +2,40 @@ export default function IntroRazonEmocion({ isAdmin }) {
     return (
         <div className="w-full h-screen bg-canvas flex flex-col items-center justify-center px-20">
             <h1 className="text-8xl font-black text-ink mb-16 text-center">
-                1. La Razón y la Acción
+                1. Limitaciones de la Razón
             </h1>
 
             <div className="max-w-6xl space-y-12 text-left">
-                <div className="border-l-8 border-ipn-guinda pl-8">
-                    <h2 className="text-5xl font-black text-ipn-guinda mb-4">
-                        Razón vs. Voluntad
+                <div className="border-l-8 border-alert-red pl-8">
+                    <h2 className="text-5xl font-black text-alert-red mb-4">
+                        No Todo es Calculable
                     </h2>
                     <p className="text-3xl font-bold text-ink leading-relaxed">
-                        La lógica no basta; la <span className="text-data-blue">voluntad</span> y el{' '}
-                        <span className="text-data-blue">deseo</span> impulsan la acción
+                        Problemas complejos NO tienen solución única. Múltiples variables,
+                        contextos cambiantes, incertidumbre constante.
                     </p>
                 </div>
 
-                <div className="border-l-8 border-alert-red pl-8">
-                    <h2 className="text-5xl font-black text-alert-red mb-4">
-                        Influencia Emocional
+                <div className="border-l-8 border-ipn-guinda pl-8">
+                    <h2 className="text-5xl font-black text-ipn-guinda mb-4">
+                        Sesgos Personales
                     </h2>
                     <p className="text-3xl font-bold text-ink leading-relaxed">
-                        Las emociones intervienen en <span className="underline decoration-4">toda decisión técnica</span>
+                        Nuestra "objetividad" está condicionada por{' '}
+                        <span className="underline decoration-4">experiencias previas</span>,{' '}
+                        <span className="underline decoration-4">cultura</span> y{' '}
+                        <span className="underline decoration-4">valores personales</span>
                     </p>
                 </div>
 
                 <div className="border-l-8 border-success-green pl-8">
                     <h2 className="text-5xl font-black text-success-green mb-4">
-                        Racionalidad Acotada
+                        El Dilema del Análisis Infinito
                     </h2>
                     <p className="text-3xl font-bold text-ink leading-relaxed">
-                        No somos seres de lógica absoluta; factores psicológicos{' '}
-                        <span className="text-alert-red font-black">(como la aversión al riesgo)</span>{' '}
-                        alteran nuestras elecciones
+                        Siempre se puede analizar{' '}
+                        <span className="text-alert-red font-black">MÁS</span>.
+                        ¿Cuándo es suficiente? La parálisis por análisis es real.
                     </p>
                 </div>
             </div>

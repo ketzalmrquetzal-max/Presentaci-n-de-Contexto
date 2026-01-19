@@ -243,7 +243,7 @@ Código disponible bajo [MIT License](LICENSE).
 
 ## 👨‍💻 Autor
 
-**Hugo Díaz**  
+**Hugo Dominguez Cabrera**  
 Ingeniería en Sistemas Computacionales  
 IPN - ESIME Culhuacán  
 Primer Semestre 2026

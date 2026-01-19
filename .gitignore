@@ -1,0 +1,117 @@
+# ==================================
+# Python (Backend)
+# ==================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# ==================================
+# Node.js (Frontend)
+# ==================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+package-lock.json
+yarn.lock
+
+# ==================================
+# Build outputs
+# ==================================
+frontend/dist/
+frontend/build/
+*.tsbuildinfo
+
+# ==================================
+# Testing
+# ==================================
+.pytest_cache/
+.vitest/
+coverage/
+htmlcov/
+.coverage
+*.cover
+.nyc_output/
+backend.log
+frontend.log
+
+# ==================================
+# IDEs y Editors
+# ==================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ==================================
+# Environment variables
+# ==================================
+.env
+.env.local
+.env.*.local
+
+# ==================================
+# OS files
+# ==================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==================================
+# Logs
+# ==================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+
+# ==================================
+# Temporary files
+# ==================================
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ==================================
+# Google IDX
+# ==================================
+.idx/
+
+# ==================================
+# Archivos personales (OneDrive, etc)
+# ==================================
+*.lnk
+
+# ==================================
+# Media files (opcional - descomentar si no quieres subir imágenes grandes)
+# ==================================
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.mp4
+# *.webm
+
+# ==================================
+# Certificados y claves (NUNCA subir)
+# ==================================
+*.pem
+*.key
+*.cert
+*.crt
+secrets/

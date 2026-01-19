@@ -1,0 +1,6 @@
+# Backend tests
+__pycache__/
+*.pyc
+.pytest_cache/
+htmlcov/
+.coverage

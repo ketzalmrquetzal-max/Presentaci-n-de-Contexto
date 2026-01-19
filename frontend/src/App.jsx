@@ -9,17 +9,20 @@ import Bienvenida from './slides/01_Bienvenida';
 import IntroRazonEmocion from './slides/02_Intro_Razon_Emocion';
 import DemoRacionalidad from './slides/03_Demo_Racionalidad';
 import ExplicacionLimitaciones from './slides/04_Explicacion_Limitaciones';
-import HistoriaTacoma from './slides/05_Historia_Tacoma';
-import HistoriaEiffel from './slides/06_Historia_Eiffel';
-import EticaProfesional from './slides/07_Etica_Profesional';
-import ConclusionCapacidades from './slides/08_Conclusion_Capacidades';
-import CasosReales from './slides/09_Casos_Reales';
+import Imaginacion from './slides/05_Imaginacion';
+import Laboriosidad from './slides/06_Laboriosidad';
+import EvidenciaHistorica from './slides/07_EvidenciaHistorica';
+import HistoriaTacoma from './slides/08_Historia_Tacoma';
+import HistoriaEiffel from './slides/09_Historia_Eiffel';
+import EticaProfesional from './slides/10_Etica_Profesional';
+import ConclusionCapacidades from './slides/11_Conclusion_Capacidades';
+import CasosReales from './slides/12_Casos_Reales';
 // Fase 6: Nuevas dinámicas
-import RadarExclusion from './slides/11_Radar_Exclusion';
-import EfectoMarco from './slides/12_Efecto_Marco';
-import PresionIngenieril from './slides/13_Presion_Ingenieril';
+import RadarExclusion from './slides/13_Radar_Exclusion';
+import EfectoMarco from './slides/14_Efecto_Marco';
+import PresionIngenieril from './slides/15_Presion_Ingenieril';
 // Créditos al final
-import Creditos from './slides/14_Creditos';
+import Creditos from './slides/16_Creditos';
 
 function App() {
     // Detectar modo Admin mediante URL parameter
@@ -36,17 +39,20 @@ function App() {
         IntroRazonEmocion,       // 2
         DemoRacionalidad,        // 3
         ExplicacionLimitaciones, // 4
-        HistoriaTacoma,          // 5
-        HistoriaEiffel,          // 6
-        EticaProfesional,        // 7
-        ConclusionCapacidades,   // 8
-        CasosReales,             // 9
+        Imaginacion,             // 5
+        Laboriosidad,            // 6
+        EvidenciaHistorica,      // 7 - NUEVO
+        HistoriaTacoma,          // 8
+        HistoriaEiffel,          // 9
+        EticaProfesional,        // 10
+        ConclusionCapacidades,   // 11
+        CasosReales,             // 12
         // Fase 6: Nuevas dinámicas
-        RadarExclusion,          // 10
-        EfectoMarco,             // 11
-        PresionIngenieril,       // 12
+        RadarExclusion,          // 13
+        EfectoMarco,             // 14
+        PresionIngenieril,       // 15
         // Créditos al final
-        Creditos,                // 13
+        Creditos,                // 16
     ];
 
     const totalSlides = slides.length;

@@ -30,7 +30,7 @@
 # ==================================
 # Build outputs
 # ==================================
-**\frontend\dist
+# **\frontend\dist  # DON'T ignore - needed for production build!
 **\frontend\build
 **\*.tsbuildinfo
 

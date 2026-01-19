@@ -17,15 +17,20 @@ export function useWebSocket() {
 
     // Función de conexión con useCallback
     const connect = useCallback(() => {
-        // Detectar entorno (IDX vs Local)
+        // Detectar entorno y determinar URL de WebSocket
         const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
         const host = window.location.hostname;
 
         let wsUrl;
         if (host.includes('idx.dev')) {
+            // Google Project IDX
             const projectId = host.split('.')[0];
             wsUrl = `wss://${projectId}-8000.idx.dev/ws`;
+        } else if (host.includes('fly.dev')) {
+            // Fly.io production
+            wsUrl = `wss://${host}/ws`;
         } else {
+            // Local development
             wsUrl = 'ws://localhost:8000/ws';
         }
 

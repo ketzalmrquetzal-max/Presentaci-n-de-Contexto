@@ -135,10 +135,6 @@ if static_path.exists():
     assets_path = static_path / "assets"
     if assets_path.exists():
         app.mount("/assets", StaticFiles(directory=assets_path), name="assets")
-    
-    # Servir imágenes PNG y otros archivos desde la raíz
-    for file in static_path.glob("*.png"):
-        # Las imágenes ya están en static/, se servirán con el catch-all route
 
 
 # --- ENDPOINTS ---
@@ -279,17 +275,19 @@ async def websocket_endpoint(websocket: WebSocket):
     except Exception as e:
         print(f"❌ Error en WebSocket: {e}")
         manager.disconnect(websocket)
+
+
 # --- CATCH-ALL ROUTE PARA SPA ---
 @app.get("/{full_path:path}")
 async def serve_spa(full_path: str):
     """Serve React SPA for all routes, but serve static files first"""
     static_path = Path(__file__).parent / "static"
-    
+
     # Si el path es un archivo estático (PNG, JPG, etc), servirlo directamente
     file_path = static_path / full_path
     if file_path.exists() and file_path.is_file():
         return FileResponse(file_path)
-    
+
     # Si no es un archivo estático, servir index.html (SPA)
     index_file = static_path / "index.html"
     if index_file.exists():

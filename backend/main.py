@@ -1,7 +1,11 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from typing import List
+from pathlib import Path
 import json
+import os
 
 app = FastAPI()
 
@@ -124,10 +128,16 @@ class ConnectionManager:
 
 manager = ConnectionManager()
 
+# --- SERVIR ARCHIVOS ESTÁTICOS DEL FRONTEND ---
+static_path = Path(__file__).parent / "static"
+if static_path.exists():
+    app.mount("/assets", StaticFiles(directory=static_path / "assets"), name="assets")
+
 
 # --- ENDPOINTS ---
-@app.get("/")
+@app.get("/api")
 def read_root():
+    """API status endpoint"""
     return {
         "status": "Sistema Operativo 🚀",
         "fase": 1,
@@ -262,3 +272,14 @@ async def websocket_endpoint(websocket: WebSocket):
     except Exception as e:
         print(f"❌ Error en WebSocket: {e}")
         manager.disconnect(websocket)
+# --- CATCH-ALL ROUTE PARA SPA ---
+@app.get("/{full_path:path}")
+async def serve_spa(full_path: str):
+    """Serve React SPA for all routes"""
+    static_path = Path(__file__).parent / "static"
+    index_file = static_path / "index.html"
+
+    if index_file.exists():
+        return FileResponse(index_file)
+    else:
+        return {"error": "Frontend not built. Run 'npm run build' in frontend/"}
